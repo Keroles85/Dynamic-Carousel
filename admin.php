@@ -27,7 +27,7 @@ $items = $db -> query($sql);
 </head>
 <body>
   <div class="container">
-    <h1 class="h1">Carousel Control Page.</h1>
+    <h1 class="h1">Carousel Control Page</h1>
     <table class="table">
       <thead>
         <tr>
@@ -52,10 +52,10 @@ $items = $db -> query($sql);
         </td>
         <td><img src="<?= $item['img_path'] ?>" class="img-fluid"></td>
         <td>
-          <input type="checkbox" <?php if($item['visible']) {echo 'checked';} ?>>
+          <input type="checkbox" <?= $item['visible']? 'checked' : ''; ?>>
         </td>
         <td>
-          <input type="radio" name="active" <?php if($item['active']) {echo 'checked';} ?>>
+          <input type="radio" name="active" <?= $item['active']? 'checked' : ''; ?>>
           </td>
         <td>
           <a href="delete.php?id=<?= $item['id'] ?>" class="btn btn-danger">

@@ -6,7 +6,7 @@ spl_autoload_register(function($class_name) {
 
 $db = new db('localhost','keroles', 'password', 'carousel');
 
-//other way to get count
+//other ways to get count
 /* $sql_count = 'select count(id) from items';
 $items_count = $db -> query($sql_count) -> fetchColumn();
 items_count = $db -> query($sql) -> rowCount(); */
