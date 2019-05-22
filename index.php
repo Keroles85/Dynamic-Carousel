@@ -71,24 +71,22 @@ $count = 0;
         
         <!-- php loop for slide buttons -->
         <?php foreach($items as $item): ?>
-        <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo$count ?>" <?php if ($item['active']) { ?> class="active" <?php } ?> ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="<?= $count ?>" <?= $item['active']? 'class="active"' : '' ?>></li>
         <?php $count++; endforeach; ?>
 
       </ol>
       <div class="carousel-inner">
 
-        <!-- php loop for slide images -->
-        <?php foreach($images as $image): ?>
-
-        <div class="carousel-item <?php if ($image['active']) { echo 'active'; } ?>">
+      <!-- php loop for slide images -->
+      <?php foreach($images as $image): ?>
+        <div class="carousel-item <?= $image['active']? 'active' : '' ?>">
           <img src="<?= $image['img_path'] ?>" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5><?= $image['title'] ?></h5>
             <p><?= $image['caption'] ?></p>
           </div>
         </div>
-
-        <?php endforeach; ?>
+      <?php endforeach; ?>
 
       </div>
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
