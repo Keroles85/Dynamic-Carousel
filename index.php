@@ -71,6 +71,7 @@ $count = 0;
         
         <!-- php loop for slide buttons -->
         <?php foreach($items as $item): ?>
+          <!-- using PHP shorthand if statment -->
           <li data-target="#carouselExampleCaptions" data-slide-to="<?= $count ?>" <?= $item['active']? 'class="active"' : '' ?>></li>
         <?php $count++; endforeach; ?>
 
@@ -87,6 +88,7 @@ $count = 0;
           </div>
         </div>
       <?php endforeach; ?>
+
 
       </div>
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
